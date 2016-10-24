@@ -1,5 +1,6 @@
 <%
-Response.Buffer=true
+Response.Buffer=true <!--asp程序的第一行，指明输出页面是否被缓冲，当属性值为True时，服务器将不会向客户端发送任何信息，直到所有程序执行完或者遇到
+<% Response.Flush %>或<% Response.End %>语句，才会释放缓冲区的信息。-->
 
 Const num=25 '链接 
 Const tNum=25 '推荐
@@ -78,6 +79,7 @@ skinext=""
 if isopenext Then skinext=ext
 ran = 0
 'templetePath = Application("templetePath_" & ran)
+	
 If templetePath <> "" Then
 Else
 templetePath = readFile(Server.MapPath(templetefile))
@@ -465,6 +467,7 @@ Set H=nothing
 Response.End()
 ENd If
 %>
+'呼应首句，会释放缓冲区的信息。
 <form id="form1" name="form1" method="get" action="">
   生成数量：<input name="ing" type="hidden" id="ing" value="update" size="10" />
     <input name="allnum" type="text" id="allnum" value="1000" size="10" />
