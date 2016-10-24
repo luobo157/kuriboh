@@ -10,7 +10,7 @@ Const mNum=4 '导航
 Const aLong =350  '文章长度的字数
 Const keyfile="k.txt"  '关键词文件名，根据k.txt里的关键词来生成$ekey$，每个关键词一行
 Const txtfile="t.txt" '内容文件名，存放文章，不需要插入{title}标签
-Const templetefile="m.html" '模板文件，导入生成$ekey$，$tkey1$，$tkey1$，$xkey1$，$content$，字符编码为gbk（暂时未清楚是那个国标）
+Const templetefile="m.html" '模板文件，导入生成$ekey$，$tkey1$，$tkey1$，$xkey1$，$content$，字符编码为gbk（暂时未清楚是哪个国标）
 Const minpathlen=5  '文件夹最小长度
 Const maxpathlen=10  '文件夹最大长度
 Const isopenext=true  '是否默认显示后缀，也即有.html
@@ -20,7 +20,7 @@ Public vs
 
 Public Function getKey(digits)  '定义并初始化数组，全局（公共）数组，digits为随机数
 Dim char_array(36)  '定义数组下标为36，也即数组有36个数据，0-9、a-z
-Dim output, num
+Dim output, num  '定义的变量num还有output为自动变量
 char_array(0) = "0"
 char_array(1) = "1"
 char_array(2) = "2"
@@ -57,13 +57,13 @@ char_array(32) = "w"
 char_array(33) = "x"
 char_array(34) = "y"
 char_array(35) = "z"
-Randomize
-Do While Len(output) < digits
-num = char_array(Int((35) * Rnd + 0))
-output = output + num
-Loop
-getKey = output
-End Function
+Randomize  '初始化随机数生成器
+Do While Len(output) < digits <!--当output的长度小于digits的时候--!>
+num = char_array(Int((35) * Rnd + 0)) 'num取值为36个数组中随机的一个向下取整，并加上0
+output = output + num  'output等于output加上num
+Loop '下一步
+getKey = output 'getkey取值output
+End Function '如果do while循环的条件满足，返回继续循环，如果不满足，结束循环
 
 Public Function GetRanNum(Min, max)
 Randomize
