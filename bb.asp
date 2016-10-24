@@ -6,19 +6,19 @@ Const tNum=25 '推荐
 Const xNum=25 '相关
 Const nNum=25 '最新
 Const mNum=4 '导航
-Const aLong =350  '文章长度
-Const keyfile="k.txt"  '关键词文件名
-Const txtfile="t.txt" '内容文件名
-Const templetefile="m.html"
+Const aLong =350  '文章长度的字数
+Const keyfile="k.txt"  '关键词文件名，根据k.txt里的关键词来生成$ekey$，每个关键词一行
+Const txtfile="t.txt" '内容文件名，存放文章，不需要插入{title}标签
+Const templetefile="m.html" '模板文件，导入生成$ekey$，$tkey1$，$tkey1$，$xkey1$，$content$，字符编码为gbk（暂时未清楚是那个国标）
 Const minpathlen=5  '文件夹最小长度
 Const maxpathlen=10  '文件夹最大长度
-Const isopenext=true  '是否默认显示后缀
+Const isopenext=true  '是否默认显示后缀，也即有.html
 Class apiClass
 Public vs
 
 
-Public Function getKey(digits)
-Dim char_array(36)
+Public Function getKey(digits)  '定义并初始化数组，全局（公共）数组，digits为随机数
+Dim char_array(36)  '定义数组下标为36，也即数组有36个数据，0-9、a-z
 Dim output, num
 char_array(0) = "0"
 char_array(1) = "1"
