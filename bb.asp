@@ -18,9 +18,9 @@ Class apiClass
 Public vs
 
 
-Public Function getKey(digits)  '定义并初始化数组，全局（公共）数组，digits为随机数
-Dim char_array(36)  '定义数组下标为36，也即数组有36个数据，0-9、a-z
-Dim output, num  '定义的变量num还有output为自动变量
+Public Function getKey(digits)  *定义并初始化数组，全局（公共）数组，digits为随机数
+Dim char_array(36)  *定义数组下标为36，也即数组有36个数据，0-9、a-z
+Dim output, num  *定义的变量num还有output为自动变量
 char_array(0) = "0"
 char_array(1) = "1"
 char_array(2) = "2"
@@ -57,13 +57,13 @@ char_array(32) = "w"
 char_array(33) = "x"
 char_array(34) = "y"
 char_array(35) = "z"
-Randomize  '初始化随机数生成器
-Do While Len(output) < digits <!--当output的长度小于digits的时候--!>
-num = char_array(Int((35) * Rnd + 0)) 'num取值为36个数组中随机的一个向下取整，并加上0
-output = output + num  'output等于output加上num
-Loop '下一步
-getKey = output 'getkey取值output
-End Function '如果do while循环的条件满足，返回继续循环，如果不满足，结束循环
+Randomize  *初始化随机数生成器
+Do While Len(output) < digits *当output的长度小于digits的时候
+num = char_array(Int((35) * Rnd + 0)) *num取值为36个数组中随机的一个向下取整，并加上0
+output = output + num  *output等于output加上num
+Loop *下一步
+getKey = output *getkey取值output
+End Function *如果do while循环的条件满足，返回继续循环，如果不满足，结束循环
 
 Public Function GetRanNum(Min, max)
 Randomize
