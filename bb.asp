@@ -65,7 +65,7 @@ Loop *下一步
 getKey = output *getkey取值output
 End Function *如果do while循环的条件满足，返回继续循环，如果不满足，结束循环
 
-Public Function GetRanNum(Min, max)
+Public Function GetRanNum(Min, max) ×申明公共的随机数组GetRanNum
 Randomize
 GetRanNum = Int((max - Min + 1) * Rnd) + Min
 End Function
@@ -78,7 +78,7 @@ vs = "2.0"
 skinext=""
 if isopenext Then skinext=ext
 ran = 0
-'templetePath = Application("templetePath_" & ran)
+/*templetePath = Application("templetePath_" & ran)*/
 	
 If templetePath <> "" Then
 Else
