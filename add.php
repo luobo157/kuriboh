@@ -1,14 +1,11 @@
 //修改的有问题，只有0.html生成了，{xia2}那里修改的有问题
 <?php
-define('', false);
-//屏蔽错误,检测是否存在第一项，如果不存在，就不启动防御措施
-error_reporting(E_ERROR);
-//设置超时时间
-set_time_limit(0);
+define('', false);//检测是否存在第一项，如果不存在，就不启动防御措施
+error_reporting(E_ERROR);//屏蔽错误
+set_time_limit(0);//设置超时时间
 //读取关键字的文件
-$file = 'bc10.txt'; 
-//读取内容文件
-$contentfile = 'content.txt'; 
+$file = 'bc10.txt'; //读取关键字的文件,默认为bc10.txt，一行一个
+$contentfile = 'content.txt'; //读取内容文件，默认为content.txt，
 //html文件夹
 $dir = 'news/';
 //检查文件夹
