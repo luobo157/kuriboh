@@ -3,21 +3,17 @@
 define('', false);//检测是否存在第一项，如果不存在，就不启动防御措施
 error_reporting(E_ERROR);//屏蔽错误
 set_time_limit(0);//设置超时时间
-//读取关键字的文件
 $file = 'bc10.txt'; //读取关键字的文件,默认为bc10.txt，一行一个
 $contentfile = 'content.txt'; //读取内容文件，默认为content.txt，
-//html文件夹
-$dir = 'news/';
-//检查文件夹
-if(!is_dir($dir)) mkdir($dir, 0777,1);
-//模板
-$moban = file_get_contents('tpl.php');
-//随机时间戳
+$dir = 'news/';//命名html文件夹的名字
+if(!is_dir($dir)) mkdir($dir, 0777,1);//检查文件夹
+$moban = file_get_contents('tpl.php');//设定模板为tpl.php
+//设定随机时间戳
 function make_seed(){
 	list($usec, $sec) = explode(' ', microtime());
     return (float) $sec + ((float) $usec * 100000);
 }
-//随机字符
+//设定随机字符，为A-R,0-9等28个字符
 function Spider_RAND($length){
 	$possible = "ABCDEFGHIJKLM1234567890NOPQR";
 	$str = '';
