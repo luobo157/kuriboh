@@ -1,0 +1,64 @@
+/*----------------------------------------------------------*/
+
+/*           移动端手机显示js文件
+
+/*----------------------------------------------------------*/
+
+
+
+var mobileAgent = new Array("iphone", "ipod", "ipad", "android", "mobile", "blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
+
+var browser = navigator.userAgent.toLowerCase();
+
+var isMobile = false;
+
+for (var i = 0; i < mobileAgent.length; i++) {
+
+    if (browser.indexOf(mobileAgent[i]) != -1) {
+
+        isMobile = true;
+
+
+
+        document.writeln("<div class=\"footer_phone_new\">");
+
+        document.writeln("	 <a href=\"tel:15768368712\"><span>立即拨打：<strong>15768368712</strong></span></a>");
+
+        document.writeln("</div>");
+
+        document.writeln("<style type=\"text/css\">");
+
+        document.writeln("    #LXB_CONTAINER_SHOW{ display: none !important;}");
+
+        document.writeln("    #LXB_CONTAINER { display: none !important;}");
+
+        document.writeln("    .lxb-container { display: none !important;}");
+
+        document.writeln("    .lxb-invite { display: none !important;}");
+
+        document.writeln("    ins { display: none !important;}");
+
+        document.writeln("</style>");
+
+        //document.getElementById("LXB_CONTAINER").style.display = "none";
+
+
+
+        break;
+
+    }
+
+}
+
+
+/*手机端电话css部分*/
+.footer_phone_new { z-index: 9999; margin: 0px; padding: 0px; width: 100%; height: 51px; line-height: 40px; text-align: center; position: fixed !important; bottom: 0px; user-select: none; color: #FFFFFF; background: #4ab5d2; }
+
+    .footer_phone_new a { display: block; color: #FFF; vertical-align: middle; }
+
+        .footer_phone_new a:visited { }
+
+        .footer_phone_new a span { color: #FFF; font-size: 20px; display: inline-block; height: 40px; line-height: 40px; color: #FFF; padding-left: 36px; background: url(../images/tel2.png) left no-repeat; }
+
+.noswap { display:none;}
+/*手机端电话end*/
