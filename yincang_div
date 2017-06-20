@@ -1,0 +1,7 @@
+/* 700px以下的尺寸，隐藏jumbotron */
+@media screen and (max-width: 700px) {
+.jumbotron {
+display: none;
+  }
+}
+/* 700px以下的尺寸，隐藏jumbotron */
