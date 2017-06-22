@@ -1,1 +1,6 @@
-控制面板–查看方式（右上角）–小图标–管理工具–Internet 信息服务(IIS)管理器–左侧单击自己的网站名称–右边双击“MIME类型”–最右边点击添加–文件扩展名填.mp4,MIME类型为 Video/mp4或者application/octet-stream，这样都是可以的，这样就行搞定啦！
+Internet 信息服务(IIS)管理器
+–左侧单击自己的网站名称
+–右边双击“MIME类型”
+–最右边点击添加
+–文件扩展名填.mp4,MIME类型为 Video/mp4或者application/octet-stream，
+这样都是可以的，这样就行搞定啦！
