@@ -58,7 +58,7 @@ for (var i = 0; i < mobileAgent.length; i++) {
 
         .footer_phone_new a:visited { }
 
-        .footer_phone_new a span { color: #FFF; font-size: 20px; display: inline-block; height: 40px; line-height: 40px; color: #FFF; padding-left: 36px; background: url(../images/tel2.png) left no-repeat; }
+        .footer_phone_new a span { color: #FFF; font-size: 20px; display: inline-block; height: 40px; line-height: 40px; color: #FFF; padding-left: 36px;  }
 
 .noswap { display:none;}
 /*手机端电话end*/
